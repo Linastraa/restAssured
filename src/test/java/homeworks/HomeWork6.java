@@ -60,6 +60,8 @@ public class HomeWork6 {
              String Url = jsonPath.getString("support.url");
              String text = jsonPath.getString("support.text");
 
+             //ASSERTIONS:-
+
              SoftAssert softAssert = new SoftAssert();
 
              softAssert.assertEquals(statusCode,200);
