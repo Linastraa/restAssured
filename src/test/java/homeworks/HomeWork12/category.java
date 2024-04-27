@@ -1,18 +1,18 @@
-package pojos;
+package homeworks.HomeWork12;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class HomeWork12_tags {
+public class category {
     private Integer id;
     private String name;
 
-    public HomeWork12_tags(Integer id, String name) {
+    public category(Integer id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public HomeWork12_tags() {
+    public category() {
     }
 
     public Integer getId() {
@@ -33,10 +33,9 @@ public class HomeWork12_tags {
 
     @Override
     public String toString() {
-        return "HomeWork12_tags{" +
+        return "category{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';
     }
 }
-

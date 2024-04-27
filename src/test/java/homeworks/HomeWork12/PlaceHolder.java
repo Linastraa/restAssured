@@ -1,23 +1,22 @@
-package pojos;
+package homeworks.HomeWork12;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.Arrays;
-import java.util.List;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class JsonPlaceHolderPojo_HomeWork12 {
+public class PlaceHolder {
     private Integer id;
-    private HomeWork12_category category;
+    private homeworks.HomeWork12.category category;
     private String name;
     private String[] photoUrls;
-    private HomeWork12_tags[] tags;
+    private homeworks.HomeWork12.tags[] tags;
     private String status;
 
-    public JsonPlaceHolderPojo_HomeWork12(){
+    public PlaceHolder(){
     }
 
-    public JsonPlaceHolderPojo_HomeWork12(Integer id, HomeWork12_category category, String name, String[] photoUrls, HomeWork12_tags[] tags, String status) {
+    public PlaceHolder(Integer id, homeworks.HomeWork12.category category, String name, String[] photoUrls, homeworks.HomeWork12.tags[] tags, String status) {
         this.id = id;
         this.category = category;
         this.name = name;
@@ -34,11 +33,11 @@ public class JsonPlaceHolderPojo_HomeWork12 {
         this.id = id;
     }
 
-    public HomeWork12_category getCategory() {
+    public homeworks.HomeWork12.category getCategory() {
         return category;
     }
 
-    public void setCategory(HomeWork12_category category) {
+    public void setCategory(homeworks.HomeWork12.category category) {
         this.category = category;
     }
 
@@ -58,11 +57,11 @@ public class JsonPlaceHolderPojo_HomeWork12 {
         this.photoUrls = photoUrls;
     }
 
-    public HomeWork12_tags[] getTags() {
+    public homeworks.HomeWork12.tags[] getTags() {
         return tags;
     }
 
-    public void setTags(HomeWork12_tags[] tags) {
+    public void setTags(homeworks.HomeWork12.tags[] tags) {
         this.tags = tags;
     }
 
@@ -76,7 +75,7 @@ public class JsonPlaceHolderPojo_HomeWork12 {
 
     @Override
     public String toString() {
-        return "JsonPlaceHolderPojo_HomeWork12{" +
+        return "PlaceHolder{" +
                 "id=" + id +
                 ", category=" + category +
                 ", name='" + name + '\'' +
