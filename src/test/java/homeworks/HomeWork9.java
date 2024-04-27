@@ -14,8 +14,8 @@ Write an automation test that will create a 'user' using the "https://petstore.s
 */
 
     @Test
-    public void postRequestTest() {
-        spec.pathParams("first", "user");
+    public void postRequestPojoTest() {
+        spec.pathParams("first", "");
 
         //Set the expected data --> With Pojo Class
         JsonPlaceHolderPojo_HomeWork9 expectedData = new JsonPlaceHolderPojo_HomeWork9(9,"Linastra","Sulaiman","Alzahrani","test@gmail.com","Test@1420","+966123456789",0);
