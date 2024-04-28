@@ -83,6 +83,7 @@ public class HomeWork12 extends BaseUrl {
     @Test
     public void putRequest() {
         spec.pathParams("first", "");
+
         //setting parameters for tags part
         tags[] tags = {new tags()};
         tags[0].setId(17);

@@ -1,9 +1,9 @@
-package pojos;
+package homeworks.HomeWork9;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)//With this annotation, we will ignore the fields that does not fit the fields in this class.
-public class JsonPlaceHolderPojo_HomeWork9 {
+public class PlaceHolder {
     private Integer id;
     private String username;
     private String firstName;
@@ -14,10 +14,10 @@ public class JsonPlaceHolderPojo_HomeWork9 {
     private Integer userStatus;
 
     //Create constructors with parameters and without parameters
-    public JsonPlaceHolderPojo_HomeWork9() {
+    public PlaceHolder() {
     }
 
-    public JsonPlaceHolderPojo_HomeWork9(Integer id, String username, String firstName, String lastName, String email, String password, String phone, Integer userStatus) {
+    public PlaceHolder(Integer id, String username, String firstName, String lastName, String email, String password, String phone, Integer userStatus) {
         this.id = id;
         this.username = username;
         this.firstName = firstName;
@@ -27,8 +27,6 @@ public class JsonPlaceHolderPojo_HomeWork9 {
         this.phone = phone;
         this.userStatus = userStatus;
     }
-
-    //Create Getters and Setters
 
     public Integer getId() {
         return id;
@@ -96,7 +94,7 @@ public class JsonPlaceHolderPojo_HomeWork9 {
 
     @Override
     public String toString() {
-        return "JsonPlaceHolderPojo_HomeWork9{" +
+        return "PlaceHolder{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
                 ", firstName='" + firstName + '\'' +

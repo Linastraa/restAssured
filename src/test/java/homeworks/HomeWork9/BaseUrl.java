@@ -1,11 +1,11 @@
-package base_urls;
+package homeworks.HomeWork9;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.BeforeMethod;
 
-public class HomeWork9BaseUrl {
+public class BaseUrl {
     protected RequestSpecification spec;
 
     @BeforeMethod
