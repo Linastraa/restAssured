@@ -5,6 +5,7 @@ import io.restassured.response.Response;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import java.util.Collections;
 import java.util.List;
 
 import static io.restassured.RestAssured.given;
@@ -44,7 +45,21 @@ public class HomeWork14 {
         response.prettyPrint();
 
 
+        JsonPath jsonPath = response.jsonPath();
 
+        List<Integer> i = jsonPath.get("data.employee_age");
+        int MaxAge = Collections.max(i);
+        int MinAge = Collections.min(i);
+        System.out.println(MaxAge);
+        System.out.println(MinAge);
+
+        int sum=0;
+        List<Integer> b = jsonPath.get("data.employee_salary");
+        for (int w:b){
+            sum=sum+w;
+        }
+
+        String age = jsonPath.get("data.find{it.employee_age == "+MinAge+"}.employee_name");
 
         response
                 .then()
@@ -52,6 +67,13 @@ public class HomeWork14 {
                 .body("data", hasSize(24),
                         "data.employee_name",hasItems("Tiger Nixon","Garrett Winters"));
 
-        List<Integer> MaxAge =
+
+
+        SoftAssert softAssert = new SoftAssert();
+
+        softAssert.assertEquals(MaxAge,66);
+        softAssert.assertEquals(age,"Tatyana Fitzpatrick");
+        softAssert.assertEquals(sum,6644770);
+        softAssert.assertAll();
     }
 }
